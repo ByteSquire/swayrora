@@ -27,8 +27,8 @@ ublue_variants:
     flavors:
       - label: aurora-nvidia
         info: Aurora
-  - label: ublue-os/swauroray
+  - label: ublue-os/swayrora
     ks: /kickstart/ublue-os.ks
     flavors:
-      - label: swauroray
-        info: Swauroray
+      - label: swayrora
+        info: Swayrora

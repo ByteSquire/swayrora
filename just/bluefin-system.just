@@ -61,8 +61,8 @@ devmode:
               NEW_IMAGE=$(echo $CURRENT_IMAGE | sed "s/bluefin/bluefin-dx/")
             elif [[ "${CURRENT_IMAGE}" =~ "aurora" ]]; then
               NEW_IMAGE=$(echo $CURRENT_IMAGE | sed "s/aurora/aurora-dx/")
-            elif [[ "${CURRENT_IMAGE}" =~ "swauroray" ]]; then
-              NEW_IMAGE=$(echo $CURRENT_IMAGE | sed "s/swauroray/swauroray-dx/")
+            elif [[ "${CURRENT_IMAGE}" =~ "swayrora" ]]; then
+              NEW_IMAGE=$(echo $CURRENT_IMAGE | sed "s/swayrora/swayrora-dx/")
             fi
             rpm-ostree rebase $NEW_IMAGE
             echo ""
@@ -77,8 +77,8 @@ devmode:
               NEW_IMAGE=$(echo $CURRENT_IMAGE | sed "s/bluefin-dx/bluefin/")
             elif [[ "${CURRENT_IMAGE}" =~ "aurora" ]]; then
               NEW_IMAGE=$(echo $CURRENT_IMAGE | sed "s/aurora-dx/aurora/")
-            elif [[ "${CURRENT_IMAGE}" =~ "swauroray" ]]; then
-              NEW_IMAGE=$(echo $CURRENT_IMAGE | sed "s/swauroray-dx/swauroray/")
+            elif [[ "${CURRENT_IMAGE}" =~ "swayrora" ]]; then
+              NEW_IMAGE=$(echo $CURRENT_IMAGE | sed "s/swayrora-dx/swayrora/")
             fi
             rpm-ostree rebase $NEW_IMAGE
         else
@@ -255,7 +255,7 @@ install-system-flatpaks:
     elif [[ ${BASE_IMAGE_NAME} == 'kinoite' ]]; then
         FLATPAKS="aurora_flatpaks/flatpaks"
     elif [[ ${BASE_IMAGE_NAME} == 'kinoite' ]]; then
-        FLATPAKS="swauroray_flatpaks/flatpaks"
+        FLATPAKS="swayrora_flatpaks/flatpaks"
     fi
     FLATPAK_LIST="$(curl https://raw.githubusercontent.com/ublue-os/bluefin/main/${FLATPAKS} | tr '\n' ' ')"
     flatpak --system -y install --or-update ${FLATPAK_LIST}

@@ -93,7 +93,7 @@ jobs:
               echo "BASE_IMAGE_NAME"="silverblue" >> $GITHUB_ENV
           elif [[ "${{ matrix.base_name }}" =~ "aurora" ]]; then
               echo "BASE_IMAGE_NAME"="kinoite" >> $GITHUB_ENV
-          elif [[ "${{ matrix.base_name }}" =~ "swauroray" ]]; then
+          elif [[ "${{ matrix.base_name }}" =~ "swayrora" ]]; then
               echo "BASE_IMAGE_NAME"="sericea" >> $GITHUB_ENV
           fi
 

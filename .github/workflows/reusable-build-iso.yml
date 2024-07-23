@@ -69,7 +69,7 @@ jobs:
             echo "VARIANT=Silverblue" >> $GITHUB_ENV
           elif [[ ${{ inputs.brand_name }} == "aurora" ]]; then
             echo "VARIANT=Kinoite" >> $GITHUB_ENV
-          elif [[ ${{ inputs.brand_name }} == "swauroray" ]]; then
+          elif [[ ${{ inputs.brand_name }} == "swayrora" ]]; then
             echo "VARIANT=Sericea" >> $GITHUB_ENV
           fi
 
@@ -114,8 +114,8 @@ jobs:
             FLATPAK_DIR_SHORTNAME="bluefin_flatpaks"
           elif [[ ${{ inputs.brand_name }} = "aurora" ]]; then
             FLATPAK_DIR_SHORTNAME="aurora_flatpaks"
-          elif [[ ${{ inputs.brand_name }} = "swauroray" ]]; then
-            FLATPAK_DIR_SHORTNAME="swauroray_flatpaks"
+          elif [[ ${{ inputs.brand_name }} = "swayrora" ]]; then
+            FLATPAK_DIR_SHORTNAME="swayrora_flatpaks"
           fi
           echo "flatpak-dir-shortname=${FLATPAK_DIR_SHORTNAME}" >> $GITHUB_OUTPUT
 

@@ -10,6 +10,6 @@ elif test "$BASE_IMAGE_NAME" = "kinoite"; then
     sed -i 's/Aurora/Aurora-dx/' /etc/yafti.yml
     sed -i 's/Aurora/Aurora-DX/' /usr/share/kde-settings/kde-profile/default/xdg/kcm-about-distrorc
 elif test "$BASE_IMAGE_NAME" = "sericea"; then
-    sed -i '/^PRETTY_NAME/s/Swauroray/Swauroray-dx/' /usr/lib/os-release
-    sed -i 's/Swauroray/Swauroray-dx/' /usr/etc/yafti.yml
+    sed -i '/^PRETTY_NAME/s/Swayrora/Swayrora-dx/' /usr/lib/os-release
+    sed -i 's/Swayrora/Swayrora-dx/' /usr/etc/yafti.yml
 fi

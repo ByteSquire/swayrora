@@ -8,7 +8,7 @@ container_mgr=(
 for i in "${container_mgr[@]}"; do
     if [[ $(command -v "$i") ]]; then
         echo "Container Manager: ${i}"
-        ${i} images --filter "reference=localhost/bluefin*-build*" --filter "reference=localhost/aurora*-build*" --filter "reference=localhost/swauroray*-build*"
+        ${i} images --filter "reference=localhost/bluefin*-build*" --filter "reference=localhost/aurora*-build*" --filter "reference=localhost/swayrora*-build*"
         echo ""
     fi
 done

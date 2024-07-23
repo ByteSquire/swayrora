@@ -4,9 +4,9 @@ on:
 
 jobs:
   build:
-    name: Swauroray Stable
+    name: Swayrora Stable
     uses: ./.github/workflows/reusable-build-iso.yml
     secrets: inherit
     with:
-      brand_name: swauroray
+      brand_name: swayrora
       fedora_version: stable

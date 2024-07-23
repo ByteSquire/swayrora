@@ -7,7 +7,7 @@ if [[ ${image} =~ "bluefin" ]]; then
     echo silverblue
 elif [[ ${image} =~ "aurora" ]]; then
     echo kinoite
-elif [[ ${image} =~ "swauroray" ]]; then
+elif [[ ${image} =~ "swayrora" ]]; then
     echo sericea
 else
     exit 1

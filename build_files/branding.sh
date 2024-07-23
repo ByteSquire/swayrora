@@ -8,10 +8,10 @@ if test "$BASE_IMAGE_NAME" = "kinoite"; then
     sed -i 's/Aurora (Beta)/Aurora \- Bluefin\-KDE (Alpha)/' /etc/yafti.yml
     sed -i 's/Bluefin/Aurora/' /usr/libexec/ublue-flatpak-manager
 elif test "$BASE_IMAGE_NAME" = "sericea"; then
-    sed -i '/^PRETTY_NAME/s/Sericea/Swauroray/' /usr/lib/os-release
-    sed -i 's/Bluefin/Swauroray/g' /usr/etc/yafti.yml
-    sed -i 's/Swauroray (Beta)/Swauroray \- Bluefin\-Sway (Alpha)/' /usr/etc/yafti.yml
-    sed -i 's/Bluefin/Swauroray/' /usr/libexec/ublue-flatpak-manager
+    sed -i '/^PRETTY_NAME/s/Sericea/Swayrora/' /usr/lib/os-release
+    sed -i 's/Bluefin/Swayrora/g' /usr/etc/yafti.yml
+    sed -i 's/Swayrora (Beta)/Swayrora \- Bluefin\-Sway (Alpha)/' /usr/etc/yafti.yml
+    sed -i 's/Bluefin/Swayrora/' /usr/libexec/ublue-flatpak-manager
 fi
 
 # Watermark for Plymouth
