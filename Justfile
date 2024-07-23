@@ -120,3 +120,9 @@ aurora-iso: (build-iso "aurora" "base" "stable")
 
 # Builed Aurora-DX ISO
 aurora-dx-iso: (build-iso "aurora" "dx" "stable")
+
+#Build Swauroray
+swauroray: (build "swauroray" "base" "stable")
+
+#Build Swauroray-DX
+swauroray: (build "swauroray" "dx" "stable")

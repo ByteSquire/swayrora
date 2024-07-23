@@ -101,7 +101,9 @@
                 "bluefin stable",
                 "bluefin-dx stable",
                 "aurora stable",
-                "aurora-dx stable"
+                "aurora-dx stable",
+                "swauroray stable",
+                "swauroray-dx stable"
             ]
         }
     ]

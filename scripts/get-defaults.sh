@@ -37,5 +37,7 @@ if [[ -z "${version}" ]]; then
         version="gts"
     elif [[ "${image}" =~ "aurora" ]]; then
         version="stable"
+    elif [[ "${image}" =~ "swauroray" ]]; then
+        version="stable"
     fi
 fi
