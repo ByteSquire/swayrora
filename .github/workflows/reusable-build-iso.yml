@@ -79,7 +79,7 @@ jobs:
         id: registry_case
         uses: ASzc/change-string-case-action@d0603cd0a7dd490be678164909f65c7737470a7f # v6
         with:
-          string: ${{ env.IMAGE_REGISTRY }}
+          string: ghcr.io/${{ github.repository_owner }}
 
       - name: Get Current Fedora Version
         id: labels
