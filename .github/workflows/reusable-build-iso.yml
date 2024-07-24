@@ -72,13 +72,21 @@ jobs:
           elif [[ ${{ inputs.brand_name }} == "swayrora" ]]; then
             echo "VARIANT=Sericea" >> $GITHUB_ENV
           fi
+          
+      # Workaround bug where capital letters in your GitHub username make it impossible to push to GHCR.
+      # https://github.com/macbre/push-to-ghcr/issues/12
+      - name: Lowercase Registry
+        id: registry_case
+        uses: ASzc/change-string-case-action@d0603cd0a7dd490be678164909f65c7737470a7f # v6
+        with:
+          string: ${{ env.IMAGE_REGISTRY }}
 
       - name: Get Current Fedora Version
         id: labels
         shell: bash
         run: |
           set -eo pipefail
-          kernel_release=$(skopeo inspect docker://ghcr.io/ublue-os/${{ env.IMAGE_NAME }}:${{ inputs.fedora_version }} | jq -r '.Labels["ostree.linux"] | split(".x86_64")[0]')
+          kernel_release=$(skopeo inspect docker://${{ steps.registry_case.outputs.lowercase }}/${{ env.IMAGE_NAME }}:${{ inputs.fedora_version }} | jq -r '.Labels["ostree.linux"] | split(".x86_64")[0]')
           fedora_version=$(echo $kernel_release | grep -oP 'fc\K[0-9]+')
           echo "kernel_release=$kernel_release" >> $GITHUB_OUTPUT
           echo "fedora_version=$fedora_version" >> $GITHUB_OUTPUT
