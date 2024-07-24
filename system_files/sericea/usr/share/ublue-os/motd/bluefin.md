@@ -1,4 +1,4 @@
-# Welcome to Aurora
+# Welcome to Swayrora
 
 🔭  `%IMAGE_NAME%:%IMAGE_TAG%`
 Let's trace the stars.
