@@ -7,4 +7,5 @@ app/org.fedoraproject.MediaWriter/x86_64/stable
 app/io.missioncenter.MissionCenter/x86_64/stable
 app/org.gnome.DejaDup/x86_64/stable
 app/org.gnome.World.PikaBackup/x86_64/stable
-app/org.gnome.seahorse.Application
+app/org.gnome.seahorse.Application/x86_64/stable
+app/org.gnome.TextEditor/x86_64/stable
