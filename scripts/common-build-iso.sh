@@ -63,7 +63,7 @@ elif [[ "${base_image}" =~ "kinoite" ]]; then
     variant=Kinoite
     flatpak_dir_shortname="aurora_flatpaks"
 elif [[ "${base_image}" =~ "sericea" ]]; then
-    variant=Kinoite
+    variant=Sericea
     flatpak_dir_shortname="swayrora_flatpaks"
 else
     exit 1
