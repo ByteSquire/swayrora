@@ -1,0 +1,12 @@
+name: Swayrora Stable
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: build
+    uses: ./.github/workflows/reusable-build.yml
+    secrets: inherit
+    with:
+      brand_name: swayrora
+      fedora_version: stable
