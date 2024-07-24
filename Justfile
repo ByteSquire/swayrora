@@ -126,3 +126,9 @@ swayrora: (build "swayrora" "base" "stable")
 
 #Build Swayrora-DX
 swayrora: (build "swayrora" "dx" "stable")
+
+# Build Swayrora ISO
+aurora-iso: (build-iso "swayrora" "base" "stable")
+
+# Builed Swayrora-DX ISO
+aurora-dx-iso: (build-iso "swayrora" "dx" "stable")
