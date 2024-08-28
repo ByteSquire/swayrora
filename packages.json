@@ -98,7 +98,8 @@
 				"swaylock",
 				"waybar",
 				"grimshot",
-				"brightnessctl"
+				"brightnessctl",
+				"blueman"
 			],
 			"dx": [
 				"adobe-source-code-pro-fonts",
