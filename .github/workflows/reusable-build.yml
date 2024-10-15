@@ -351,6 +351,7 @@ jobs:
             sudo podman pull ${{ env.UBLUE_IMAGE_REGISTRY }}/${{ env.BASE_IMAGE_NAME }}-${{ env.image_flavor }}:${{ env.fedora_version }}
             sudo podman pull ${{ env.UBLUE_IMAGE_REGISTRY }}/akmods:${{ env.AKMODS_FLAVOR }}-${{ env.fedora_version }}
             sudo podman pull ${{ env.UBLUE_IMAGE_REGISTRY }}/akmods-nvidia:${{ env.AKMODS_FLAVOR }}-${{ env.fedora_version }}
+            sudo podman pull ${{ env.UBLUE_IMAGE_REGISTRY }}/akmods-zfs:coreos-stable-${{ env.fedora_version }}
             sudo podman pull ${{ env.UBLUE_IMAGE_REGISTRY }}/${{ env.AKMODS_FLAVOR }}-kernel:${{ env.kernel_release }}
 
       - name: Build Image
