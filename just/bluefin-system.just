@@ -130,11 +130,25 @@ ptyxis-transparency opacity="0.95":
 
 # Configure docker,incus-admin,lxd,libvirt container manager permissions
 dx-group:
+    #!/usr/bin/env bash
+    append_group() {
+    local group_name="$1"
+    if ! grep -q "^$group_name:" /etc/group; then
+      echo "Appending $group_name to /etc/group"
+      grep "^$group_name:" /usr/lib/group | sudo tee -a /etc/group > /dev/null
+    fi
+    }
+
+    append_group docker
+    append_group incus-admin
+    append_group lxd
+    append_group libvirt
+
     sudo usermod -aG docker $USER
     sudo usermod -aG incus-admin $USER
     sudo usermod -aG lxd $USER
     sudo usermod -aG libvirt $USER
-    @echo "Logout to use docker, incus-admin, lxd, libvirt"
+    echo "Logout to use docker, incus-admin, lxd, libvirt"
 
 # Configure system to use vfio and kvmfr
 configure-vfio ACTION="":
@@ -250,12 +264,12 @@ install-system-flatpaks:
 configure-grub:
     @/usr/libexec/configure-grub.sh
 
+alias rollback-helper := rebase-helper
+alias switch-channel := rebase-helper
+
 # Rebase assistant
 rebase-helper:
     @/usr/bin/ublue-rollback-helper
-
-alias rollback-helper := rebase-helper
-alias switch-channel := rebase-helper
 
 update-ng:
     echo "Note: This command doesn't work if you have locally layered packages" 

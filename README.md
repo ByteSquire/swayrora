@@ -32,6 +32,7 @@ Both Aurora and Bluefin strive to offer a curated out of the box experience for 
 
 1. [Discussions and Announcements](https://universal-blue.discourse.group/c/bluefin/6) - strongly recommended!
 2. [Documentation](https://docs.projectbluefin.io/)
+3. [Contributing Guide](https://docs.projectbluefin.io/contributing)
 
 ### Secure Boot
 
@@ -53,10 +54,6 @@ If you'd like to enroll this key prior to installation or rebase, download the k
 sudo mokutil --timeout -1
 sudo mokutil --import public_key.der
 ```
-
-#### Note
-
-If you encounter an issue with a password being recognized as incorrect, try using the `-` key on the numpad instead.
 
 ## Repobeats
 
