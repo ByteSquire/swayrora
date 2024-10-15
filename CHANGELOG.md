@@ -1,5 +1,81 @@
 # Changelog
 
+## [3.6.0](https://github.com/ublue-os/bluefin/compare/v3.5.0...v3.6.0) (2024-10-14)
+
+
+### Features
+
+* Add Borgbackup on the image for both Aurora and Bluefin ([#1780](https://github.com/ublue-os/bluefin/issues/1780)) ([e1a0ec9](https://github.com/ublue-os/bluefin/commit/e1a0ec9d7b742bd311850b1c5d16f42b7f13bd15))
+* add cryfs to bluefin ([#1771](https://github.com/ublue-os/bluefin/issues/1771)) ([9b78993](https://github.com/ublue-os/bluefin/commit/9b78993b311d6ccd8ff80df475577707569eac09))
+* add random dinos to fish fastfetch ([#1769](https://github.com/ublue-os/bluefin/issues/1769)) ([a291470](https://github.com/ublue-os/bluefin/commit/a29147006bb15c07e91c3d997a0781076bda8514))
+* enable stable-daily channel ([#1779](https://github.com/ublue-os/bluefin/issues/1779)) ([3201dd3](https://github.com/ublue-os/bluefin/commit/3201dd34ed983517c0d36ec53d59ab18b151972b))
+
+
+### Bug Fixes
+
+* Don't show version, Use only Pretty Name ([#1758](https://github.com/ublue-os/bluefin/issues/1758)) ([44208ff](https://github.com/ublue-os/bluefin/commit/44208ffd888730bdda4b4ae374aabff27cb7a187))
+* fix os-release naming ([#1757](https://github.com/ublue-os/bluefin/issues/1757)) ([938e81a](https://github.com/ublue-os/bluefin/commit/938e81a96589ebd37564cf2ad4c28750cb032e30))
+* just dx-group append group entry from /usr/lib/group ([#1767](https://github.com/ublue-os/bluefin/issues/1767)) ([4729268](https://github.com/ublue-os/bluefin/commit/47292684ec00fbf2c448be95b4eb008f0f714535))
+* Ollama WebUI isn't started by the ujust command ([#1745](https://github.com/ublue-os/bluefin/issues/1745)) ([c60cafa](https://github.com/ublue-os/bluefin/commit/c60cafa9365e05b8eb22a2acae0f951cb94ea7c2))
+* switch latest images to use ungated upstream kernel ([#1722](https://github.com/ublue-os/bluefin/issues/1722)) ([bab923c](https://github.com/ublue-os/bluefin/commit/bab923c17a4b574606259a51a6d2adf09095f806))
+
+
+### Reverts
+
+* "chore: dynamically set the wallpaper based on season" ([#1776](https://github.com/ublue-os/bluefin/issues/1776)) ([45d9641](https://github.com/ublue-os/bluefin/commit/45d96418f5602c31babdef79c190807b9e11f912))
+
+## [3.5.0](https://github.com/ublue-os/bluefin/compare/v3.4.0...v3.5.0) (2024-10-04)
+
+
+### Features
+
+* Add os-release changes from Bazzite ([#1708](https://github.com/ublue-os/bluefin/issues/1708)) ([78671f2](https://github.com/ublue-os/bluefin/commit/78671f218b60e52e4240b480f1319e19d6f1cfbb))
+* add setools-console ([#1738](https://github.com/ublue-os/bluefin/issues/1738)) ([a6996d2](https://github.com/ublue-os/bluefin/commit/a6996d21776ce492f5480b5c40102d3a37ede74b))
+* add specific flatpaks to dx images ([#1732](https://github.com/ublue-os/bluefin/issues/1732)) ([85714c3](https://github.com/ublue-os/bluefin/commit/85714c3943b2649b3d2cba729b48a4b80c1f8d8d))
+* **bluefin-cli:** add trash-cli ([#1720](https://github.com/ublue-os/bluefin/issues/1720)) ([4f15f91](https://github.com/ublue-os/bluefin/commit/4f15f9157cbd2e525229b0782cfae54602b75bf3))
+* **dx:** add virt-v2v ([#1733](https://github.com/ublue-os/bluefin/issues/1733)) ([a7bf567](https://github.com/ublue-os/bluefin/commit/a7bf567538713b084222908f7980c0805fc08677))
+* fix weird titlebar on chromium ([#1709](https://github.com/ublue-os/bluefin/issues/1709)) ([9fe6e1c](https://github.com/ublue-os/bluefin/commit/9fe6e1c5dd0a1778e92458efed896ee7254c42e1))
+* **framework:** add color profile for the new fw13 screen ([#1705](https://github.com/ublue-os/bluefin/issues/1705)) ([09f8bae](https://github.com/ublue-os/bluefin/commit/09f8baeeef0fd6a529983cbd1f64377dab8b6e0b))
+
+
+### Bug Fixes
+
+* Correct doubled build ID in DX images ([#1714](https://github.com/ublue-os/bluefin/issues/1714)) ([afee492](https://github.com/ublue-os/bluefin/commit/afee4926b1ee2f1417703c2d3dc4e9ef073491e9))
+* don't update if on a metered connection ([#1658](https://github.com/ublue-os/bluefin/issues/1658)) ([76fb411](https://github.com/ublue-os/bluefin/commit/76fb4117c1a5c68805ab3801ad680dbc90d45a5f))
+* ensure gnome-extensions-app is removed ([#1724](https://github.com/ublue-os/bluefin/issues/1724)) ([a2c65af](https://github.com/ublue-os/bluefin/commit/a2c65af00821491c7aa28527276fc4e90c27c6a1))
+* remove scx-scheds ([#1723](https://github.com/ublue-os/bluefin/issues/1723)) ([cce3a1c](https://github.com/ublue-os/bluefin/commit/cce3a1cf24bcdf2563c11560280ef28cc4b63824))
+* rename discourse shortcut to community ([#1710](https://github.com/ublue-os/bluefin/issues/1710)) ([7b8091e](https://github.com/ublue-os/bluefin/commit/7b8091e7e882f21f8d1a9ad2847c5633a696cf48))
+
+## [3.4.0](https://github.com/ublue-os/bluefin/compare/v3.3.0...v3.4.0) (2024-09-27)
+
+
+### Features
+
+* add active directory support ([#1674](https://github.com/ublue-os/bluefin/issues/1674)) ([0e1ccd4](https://github.com/ublue-os/bluefin/commit/0e1ccd47e5e1bcc7c7c67228a63f4325d3453f94))
+* add Discourse desktop shortcut ([#1693](https://github.com/ublue-os/bluefin/issues/1693)) ([6915ede](https://github.com/ublue-os/bluefin/commit/6915ede68a9dd166d69048a2aa4e142b1b05df8b))
+* add git-credential-libsecret to DX ([#1649](https://github.com/ublue-os/bluefin/issues/1649)) ([8c9b724](https://github.com/ublue-os/bluefin/commit/8c9b724965ef7743a4e4f641fa22fe34a2df6784))
+* Add notification for secure boot key check ([#1661](https://github.com/ublue-os/bluefin/issues/1661)) ([2d9f673](https://github.com/ublue-os/bluefin/commit/2d9f673095e4ea70be628bd35899c149dfaca8e0))
+* add performance tools ([#1667](https://github.com/ublue-os/bluefin/issues/1667)) ([c7f436c](https://github.com/ublue-os/bluefin/commit/c7f436cbf18c58c1a7ba73d03e1445ca570dabd4))
+* add scx-scheds ([#1681](https://github.com/ublue-os/bluefin/issues/1681)) ([1eb075d](https://github.com/ublue-os/bluefin/commit/1eb075d0e9bbb90377f08e5f74815c4a1a1a08a3))
+* disable ollama-web quadlet auth ([#1625](https://github.com/ublue-os/bluefin/issues/1625)) ([8391f69](https://github.com/ublue-os/bluefin/commit/8391f69899a5856018d7894317fb5dc1bec3a1ca))
+* **gnome:** Set animation speed to .8 ([#1673](https://github.com/ublue-os/bluefin/issues/1673)) ([b658b32](https://github.com/ublue-os/bluefin/commit/b658b32e9f764c6a5a93e51ec6a1af299a5984ef))
+* rechunk images into smaller parts ([#1687](https://github.com/ublue-os/bluefin/issues/1687)) ([a63c028](https://github.com/ublue-os/bluefin/commit/a63c02892746f31c4f9d56243c73984238a418ff))
+* switch to autumn wallpapers ([#1631](https://github.com/ublue-os/bluefin/issues/1631)) ([3865644](https://github.com/ublue-os/bluefin/commit/3865644ffa824551845255302bd5d29c1de2ef38))
+
+
+### Bug Fixes
+
+* **aurora:** update KDE settings homepage link ([#1654](https://github.com/ublue-os/bluefin/issues/1654)) ([b31172b](https://github.com/ublue-os/bluefin/commit/b31172b0f35a3e2b989c4d9bb25dde1ea4f1a480))
+* **bluefin-tools:** Don't explicitly start ollama after creating service ([#1659](https://github.com/ublue-os/bluefin/issues/1659)) ([0b49d5c](https://github.com/ublue-os/bluefin/commit/0b49d5c2db927c58e7b9828dc287c511b2540e40))
+* **ci:** switch to rootful podman build ([#1698](https://github.com/ublue-os/bluefin/issues/1698)) ([febf8a7](https://github.com/ublue-os/bluefin/commit/febf8a7fe00842ccbed01165b7638fd597e016e4))
+* enable incus-startup service ([#1688](https://github.com/ublue-os/bluefin/issues/1688)) ([3974ca9](https://github.com/ublue-os/bluefin/commit/3974ca9adfd507bc73386d66c6e9ca13a8d74658))
+* **just:** fix rebase-helper aliases ([#1695](https://github.com/ublue-os/bluefin/issues/1695)) ([d26f1f7](https://github.com/ublue-os/bluefin/commit/d26f1f71e283e3ee4de0b4460887b198ff8f60c8))
+* **just:** remove configure-shell ([#1671](https://github.com/ublue-os/bluefin/issues/1671)) ([3d773c5](https://github.com/ublue-os/bluefin/commit/3d773c5312f0697b4168818a97b60b9b56117bd0))
+* limited linesize to 78 characters to accomodate 80x24 terminal  ([#1640](https://github.com/ublue-os/bluefin/issues/1640)) ([961a86b](https://github.com/ublue-os/bluefin/commit/961a86b566192dd505cf80c38d79e043576a277f))
+* remove nonexistant libsssd_sudo package ([#1682](https://github.com/ublue-os/bluefin/issues/1682)) ([d02a945](https://github.com/ublue-os/bluefin/commit/d02a9454ffb2e5bc2336b275da02230d77f1deda))
+* remove xpadneo ([#1635](https://github.com/ublue-os/bluefin/issues/1635)) ([8c62122](https://github.com/ublue-os/bluefin/commit/8c62122149bd6ddbe2ccf44a53cd1b8689342756))
+* update warning formatting ([#1699](https://github.com/ublue-os/bluefin/issues/1699)) ([68cabb2](https://github.com/ublue-os/bluefin/commit/68cabb2b39baa8130bd0a1a5c4d388ba6362985c))
+
 ## [3.3.0](https://github.com/ublue-os/bluefin/compare/v3.2.0...v3.3.0) (2024-08-23)
 
 
