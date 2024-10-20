@@ -26,6 +26,7 @@ on:
         value: ${{ jobs.check.outputs.images }}
 env:
   IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
+  UBLUE_IMAGE_REGISTRY: ghcr.io/ublue-os
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref || github.run_id }}-${{ inputs.fedora_version }}
@@ -327,10 +328,6 @@ jobs:
             ostree.linux=${{ env.kernel_release }}
             io.artifacthub.package.readme-url=https://raw.githubusercontent.com/ublue-os/bluefin/bluefin/README.md
             io.artifacthub.package.logo-url=https://avatars.githubusercontent.com/u/120078124?s=200&v=4
-      
-      - name: downcase REPO
-        run: |
-          echo "REPO=${GITHUB_REPOSITORY@L}" >>${GITHUB_ENV}
 
       - name: Define env.SHA_HEAD_SHORT
         run: |
@@ -351,10 +348,10 @@ jobs:
           command: |
             # pull the base image used for FROM in containerfile so
             # we can retry on that unfortunately common failure case
-            sudo podman pull ${{ env.IMAGE_REGISTRY }}/${{ env.BASE_IMAGE_NAME }}-${{ env.image_flavor }}:${{ env.fedora_version }}
-            sudo podman pull ${{ env.IMAGE_REGISTRY }}/akmods:${{ env.AKMODS_FLAVOR }}-${{ env.fedora_version }}
-            sudo podman pull ${{ env.IMAGE_REGISTRY }}/akmods-nvidia:${{ env.AKMODS_FLAVOR }}-${{ env.fedora_version }}
-            sudo podman pull ${{ env.IMAGE_REGISTRY }}/${{ env.AKMODS_FLAVOR }}-kernel:${{ env.kernel_release }}
+            sudo podman pull ${{ env.UBLUE_IMAGE_REGISTRY }}/${{ env.BASE_IMAGE_NAME }}-${{ env.image_flavor }}:${{ env.fedora_version }}
+            sudo podman pull ${{ env.UBLUE_IMAGE_REGISTRY }}/akmods:${{ env.AKMODS_FLAVOR }}-${{ env.fedora_version }}
+            sudo podman pull ${{ env.UBLUE_IMAGE_REGISTRY }}/akmods-nvidia:${{ env.AKMODS_FLAVOR }}-${{ env.fedora_version }}
+            sudo podman pull ${{ env.UBLUE_IMAGE_REGISTRY }}/${{ env.AKMODS_FLAVOR }}-kernel:${{ env.kernel_release }}
 
       - name: Build Image
         id: build_image
