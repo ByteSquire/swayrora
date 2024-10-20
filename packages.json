@@ -92,6 +92,7 @@
 			],
 			"sericea": [
 				"gnome-keyring",
+				"polkit-gnome",
 				"mako",
 				"pavucontrol",
 				"wofi",
