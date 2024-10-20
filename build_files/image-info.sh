@@ -22,6 +22,12 @@ if [[ "${BASE_IMAGE_NAME}" == "kinoite" ]]; then
   HOME_URL="https://getaurora.dev/"
 fi
 
+# Swayrora
+if [[ "${BASE_IMAGE_NAME}" == "sericea" ]]; then
+  IMAGE_PRETTY_NAME="Swayrora"
+  HOME_URL="https://github.com/ByteSquire/swayrora"
+fi
+
 if [[ "${NVIDIA_TYPE}" == "nvidia" ]]; then
   image_flavor="nvidia"
 fi
