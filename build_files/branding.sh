@@ -8,9 +8,8 @@ if test "$BASE_IMAGE_NAME" = "kinoite"; then
     sed -i 's/Aurora (Beta)/Aurora \- Bluefin\-KDE (Alpha)/' /etc/yafti.yml
     sed -i 's/Bluefin/Aurora/' /usr/libexec/ublue-flatpak-manager
 elif test "$BASE_IMAGE_NAME" = "sericea"; then
-    sed -i '/^PRETTY_NAME/s/Sericea/Swayrora/' /usr/lib/os-release
     sed -i 's/Bluefin/Swayrora/g' /etc/yafti.yml
-    sed -i 's/Swayrora (Beta)/Swayrora \- Bluefin\-Sway (Alpha)/' /etc/yafti.yml
+    sed -i 's/Swayrora (Beta)/Swayrora \- Bluefin\-KDE (Alpha)/' /etc/yafti.yml
     sed -i 's/Bluefin/Swayrora/' /usr/libexec/ublue-flatpak-manager
 fi
 
