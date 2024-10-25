@@ -25,6 +25,7 @@
 				"ifuse",
 				"input-leap",
 				"input-remapper",
+				"jetbrains-mono-fonts-all",
 				"libimobiledevice",
 				"libxcrypt-compat",
 				"libsss_autofs",
@@ -109,10 +110,10 @@
 				"bpftop",
 				"bpftrace",
 				"cascadia-code-fonts",
+				"cockpit-bridge",
 				"cockpit-machines",
 				"cockpit-networkmanager",
 				"cockpit-ostree",
-				"cockpit-pcp",
 				"cockpit-podman",
 				"cockpit-selinux",
 				"cockpit-storaged",
@@ -134,7 +135,6 @@
 				"incus",
 				"incus-agent",
 				"iotop",
-				"jetbrains-mono-fonts-all",
 				"kcli",
 				"libvirt",
 				"libvirt-nss",
@@ -229,7 +229,7 @@
 			]
 		},
 		"exclude": {
-			"all":	[],
+			"all": [],
 			"silverblue": [],
 			"kinoite": [],
 			"dx": []
@@ -244,7 +244,7 @@
 			"silverblue": []
 		},
 		"exclude": {
-			"all":	[],
+			"all": [],
 			"silverblue": [],
 			"kinoite": [
 				"plasma-welcome",
