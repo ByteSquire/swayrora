@@ -10,6 +10,7 @@ on:
         options:
           - '["bluefin"]'
           - '["aurora"]'
+          - '["swayrora"]'
           - '["bluefin", "aurora"]'
 
 jobs:
