@@ -19,7 +19,6 @@ if [[ "${BASE_IMAGE_NAME}" =~ kinoite ]]; then
   HOME_URL="https://getaurora.dev/"
 fi
 
-<<<<<<< HEAD:build_files/image-info.sh
 # Swayrora
 if [[ "${BASE_IMAGE_NAME}" == "sericea" ]]; then
   IMAGE_PRETTY_NAME="Swayrora"
@@ -27,11 +26,6 @@ if [[ "${BASE_IMAGE_NAME}" == "sericea" ]]; then
 fi
 
 if [[ "${NVIDIA_TYPE}" == "nvidia" ]]; then
-=======
-# Image Flavor
-image_flavor="main"
-if [[ "${IMAGE_NAME}" =~ nvidia ]]; then
->>>>>>> ublue-main:build_files/base/00-image-info.sh
   image_flavor="nvidia"
 fi
 
