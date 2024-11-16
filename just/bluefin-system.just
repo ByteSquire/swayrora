@@ -19,11 +19,6 @@ benchmark:
 bluefin-cli:
     @/usr/libexec/ublue-bling.sh
 
-# Configure Bluefin-CLI Terminal Experience
-[private]
-bluefin-cli-container:
-    @/usr/libexec/enable-bluefin-cli.sh
-
 # Configure Terminal Experience
 [private]
 configure-terminal:
@@ -148,7 +143,7 @@ dx-group:
     sudo usermod -aG incus-admin $USER
     sudo usermod -aG lxd $USER
     sudo usermod -aG libvirt $USER
-    echo "Logout to use docker, incus-admin, lxd, libvirt"
+    echo "Reboot system and log back in to use docker, incus-admin, lxd, libvirt."
 
 # Configure system to use vfio and kvmfr
 configure-vfio ACTION="":
@@ -196,7 +191,7 @@ configure-vfio ACTION="":
         if [[ ${CPU_VENDOR} == "AuthenticAMD" ]]; then
           VENDOR_KARG="amd_iommu=on"
         elif [[ ${CPU_VENDOR} == "GenuineIntel" ]]; then
-          VENDOR_KARG="intel_iommu=on"  
+          VENDOR_KARG="intel_iommu=on"
         fi
         if [[ ${VENDOR_KARG} == "unset" ]]; then
           echo "Failed to get CPU vendor, exiting..."
@@ -272,7 +267,7 @@ rebase-helper:
     @/usr/bin/ublue-rollback-helper
 
 update-ng:
-    echo "Note: This command doesn't work if you have locally layered packages" 
+    echo "Note: This command doesn't work if you have locally layered packages"
     sudo bootc upgrade
     flatpak update -y
     brew upgrade
@@ -288,7 +283,7 @@ toggle-tailscale:
 
     if [ "$TAILSCALED_STATUS" == "enabled" ] || [ "$TAILSCALED_STATUS" == "disabled" ]; then
         TAILSCALED="Installed"
-    else 
+    else
         TAILSCALED="Not Found"
         echo "${b}${red}Unable to enable or disable Tailscale.${n}"
         echo "The tailscaled service must be present and either enabled or disabled to run this script."
