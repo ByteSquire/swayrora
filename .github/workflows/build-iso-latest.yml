@@ -5,7 +5,7 @@ on:
     inputs:
       brand_name:
         description: "Image Brand to Build"
-        default: '["bluefin"]'
+        default: '["swayrora"]'
         type: choice
         options:
           - '["bluefin"]'
