@@ -25,7 +25,9 @@ if [[ "${BASE_IMAGE_NAME}" == "sericea" ]]; then
   HOME_URL="https://github.com/ByteSquire/swayrora"
 fi
 
-if [[ "${NVIDIA_TYPE}" == "nvidia" ]]; then
+# Image Flavor
+image_flavor="main"
+if [[ "${IMAGE_NAME}" =~ nvidia ]]; then
   image_flavor="nvidia"
 fi
 
