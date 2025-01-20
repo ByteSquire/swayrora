@@ -2,12 +2,12 @@
 
 set -ouex pipefail
 
-IMAGE_PRETTY_NAME="Aurora"
+IMAGE_PRETTY_NAME="Swayrora"
 IMAGE_LIKE="fedora"
 HOME_URL="https://getaurora.dev/"
 DOCUMENTATION_URL="https://docs.getaurora.dev"
-SUPPORT_URL="https://github.com/ublue-os/aurora/issues/"
-BUG_SUPPORT_URL="https://github.com/ublue-os/aurora/issues/"
+SUPPORT_URL="https://github.com/bytesquire/swayrora/issues/"
+BUG_SUPPORT_URL="https://github.com/bytesquire/swayrora/issues/"
 VERSION="${VERSION:-00.00000000}"
 
 IMAGE_INFO="/usr/share/ublue-os/image-info.json"

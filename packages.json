@@ -76,6 +76,18 @@
 				"plasma-wallpapers-dynamic",
 				"skanpage"
 			],
+			"sericea": [
+				"gnome-keyring",
+				"lxpolkit",
+				"mako",
+				"pavucontrol",
+				"wofi",
+				"swaylock",
+				"waybar",
+				"grimshot",
+				"brightnessctl",
+				"blueman"
+			],
 			"dx": [
 				"adobe-source-code-pro-fonts",
 				"android-tools",
@@ -159,6 +171,9 @@
 				"krfb",
 				"krfb-libs",
 				"plasma-welcome"
+			],
+			"sericea": [
+				"rofi*"
 			],
 			"dx": []
 		}

@@ -56,7 +56,7 @@ toggle-devmode:
             exit 0
         fi
         echo "Rebasing to a developer image"
-        NEW_IMAGE=$(sed "s/aurora/aurora-dx/" <<< $CURRENT_IMAGE)
+        NEW_IMAGE=$(sed "s/swayrora/swayrora-dx/" <<< $CURRENT_IMAGE)
         rpm-ostree rebase $NEW_IMAGE
         echo -e "\nUse `ujust dx-group` to add your user to the correct groups and complete the installation"
     fi
@@ -219,7 +219,7 @@ install-system-flatpaks:
     #!/usr/bin/bash
     IMAGE_INFO="/usr/share/ublue-os/image-info.json"
     BASE_IMAGE_NAME=$(jq -r '."base-image-name"' < $IMAGE_INFO)
-    FLATPAKS="aurora_flatpaks/flatpaks"
+    FLATPAKS="swayrora_flatpaks/flatpaks"
     FLATPAK_LIST="$(curl https://raw.githubusercontent.com/ublue-os/aurora/main/${FLATPAKS} | tr '\n' ' ')"
     flatpak --system -y install --or-update ${FLATPAK_LIST}
 

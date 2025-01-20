@@ -7,7 +7,7 @@ on:
         default: "['main', 'nvidia', 'nvidia-open']"
         type: string
       brand_name:
-        description: "The Brand Name: aurora"
+        description: "The Brand Name: swayrora"
         required: true
         type: string
       stream_name:
@@ -79,34 +79,34 @@ jobs:
           compression-level: 0
           overwrite: true
         
-      - name: HWE ISO rename
-        if: contains(matrix.image_flavor, 'hwe')
-        shell: bash
-        run: |
-          set -eoux pipefail
-          iso_name="${{ env.ISO_NAME }}"
-          asus_name="${iso_name/hwe/asus}"
-          surface_name="${iso_name/hwe/surface}"
-          mv "${{ steps.upload-directory.outputs.iso-upload-dir }}/${iso_name}" "${{ steps.upload-directory.outputs.iso-upload-dir}}/${asus_name}"
-          mv "${{ steps.upload-directory.outputs.iso-upload-dir }}/${iso_name}-CHECKSUM" "${{ steps.upload-directory.outputs.iso-upload-dir}}/${asus_name}-CHECKSUM"
-          sed -i -e 's/-hwe/-asus/' "${{ steps.upload-directory.outputs.iso-upload-dir}}/${asus_name}-CHECKSUM"
-          cp "${{ steps.upload-directory.outputs.iso-upload-dir }}/${asus_name}" "${{ steps.upload-directory.outputs.iso-upload-dir}}/${surface_name}"
-          cp "${{ steps.upload-directory.outputs.iso-upload-dir }}/${asus_name}-CHECKSUM" "${{ steps.upload-directory.outputs.iso-upload-dir}}/${surface_name}-CHECKSUM"
-          sed -i -e 's/-asus/-surface/' "${{ steps.upload-directory.outputs.iso-upload-dir}}/${surface_name}-CHECKSUM"
-          tree "${{ steps.upload-directory.outputs.iso-upload-dir }}"
+      # - name: HWE ISO rename
+      #   if: contains(matrix.image_flavor, 'hwe')
+      #   shell: bash
+      #   run: |
+      #     set -eoux pipefail
+      #     iso_name="${{ env.ISO_NAME }}"
+      #     asus_name="${iso_name/hwe/asus}"
+      #     surface_name="${iso_name/hwe/surface}"
+      #     mv "${{ steps.upload-directory.outputs.iso-upload-dir }}/${iso_name}" "${{ steps.upload-directory.outputs.iso-upload-dir}}/${asus_name}"
+      #     mv "${{ steps.upload-directory.outputs.iso-upload-dir }}/${iso_name}-CHECKSUM" "${{ steps.upload-directory.outputs.iso-upload-dir}}/${asus_name}-CHECKSUM"
+      #     sed -i -e 's/-hwe/-asus/' "${{ steps.upload-directory.outputs.iso-upload-dir}}/${asus_name}-CHECKSUM"
+      #     cp "${{ steps.upload-directory.outputs.iso-upload-dir }}/${asus_name}" "${{ steps.upload-directory.outputs.iso-upload-dir}}/${surface_name}"
+      #     cp "${{ steps.upload-directory.outputs.iso-upload-dir }}/${asus_name}-CHECKSUM" "${{ steps.upload-directory.outputs.iso-upload-dir}}/${surface_name}-CHECKSUM"
+      #     sed -i -e 's/-asus/-surface/' "${{ steps.upload-directory.outputs.iso-upload-dir}}/${surface_name}-CHECKSUM"
+      #     tree "${{ steps.upload-directory.outputs.iso-upload-dir }}"
 
-      - name: Upload ISOs and Checksum to R2 to Aurora Bucket
-        if: github.ref_name == 'main' && contains(matrix.base_name,'aurora')
-        shell: bash
-        env:
-          RCLONE_CONFIG_R2_TYPE: s3
-          RCLONE_CONFIG_R2_PROVIDER: Cloudflare
-          RCLONE_CONFIG_R2_ACCESS_KEY_ID: ${{ secrets.AURORA_R2_ACCESS_KEY_ID }}
-          RCLONE_CONFIG_R2_SECRET_ACCESS_KEY: ${{ secrets.AURORA_R2_SECRET_ACCESS_KEY }}
-          RCLONE_CONFIG_R2_REGION: auto
-          RCLONE_CONFIG_R2_ENDPOINT: ${{ secrets.AURORA_R2_ENDPOINT }}
-          SOURCE_DIR: ${{ steps.upload-directory.outputs.iso-upload-dir }}
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y rclone
-          rclone copy $SOURCE_DIR R2:aurora-dl
+      # - name: Upload ISOs and Checksum to R2 to Aurora Bucket
+      #   if: github.ref_name == 'main' && contains(matrix.base_name,'aurora')
+      #   shell: bash
+      #   env:
+      #     RCLONE_CONFIG_R2_TYPE: s3
+      #     RCLONE_CONFIG_R2_PROVIDER: Cloudflare
+      #     RCLONE_CONFIG_R2_ACCESS_KEY_ID: ${{ secrets.AURORA_R2_ACCESS_KEY_ID }}
+      #     RCLONE_CONFIG_R2_SECRET_ACCESS_KEY: ${{ secrets.AURORA_R2_SECRET_ACCESS_KEY }}
+      #     RCLONE_CONFIG_R2_REGION: auto
+      #     RCLONE_CONFIG_R2_ENDPOINT: ${{ secrets.AURORA_R2_ENDPOINT }}
+      #     SOURCE_DIR: ${{ steps.upload-directory.outputs.iso-upload-dir }}
+      #   run: |
+      #     sudo apt-get update
+      #     sudo apt-get install -y rclone
+      #     rclone copy $SOURCE_DIR R2:aurora-dl

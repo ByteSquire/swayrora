@@ -5,10 +5,10 @@ on:
     inputs:
       brand_name:
         description: "Image Brand to Build"
-        default: '["aurora"]'
+        default: '["swayrora"]'
         type: choice
         options:
-          - '["aurora"]'
+          - '["swayrora"]'
 
 jobs:
   build-iso-stable:
@@ -18,7 +18,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        brand_name: ${{ fromJson(inputs.brand_name || '["aurora"]') }}
+        brand_name: ${{ fromJson(inputs.brand_name || '["swayrora"]') }}
     with:
       brand_name: ${{ matrix.brand_name }}
       stream_name: stable

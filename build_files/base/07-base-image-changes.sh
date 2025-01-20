@@ -11,7 +11,7 @@ fi
 ln -sf ../places/distributor-logo.svg /usr/share/icons/hicolor/scalable/apps/start-here.svg
 ln -sf /usr/share/wallpapers/aurora-wallpaper-1/contents/images/15392x8616.jpg /usr/share/backgrounds/default.png
 ln -sf /usr/share/wallpapers/aurora-wallpaper-1/contents/images/15392x8616.jpg /usr/share/backgrounds/default-dark.png
-ln -sf aurora.xml /usr/share/backgrounds/default.xml
+ln -sf swayrora.xml /usr/share/backgrounds/default.xml
 
 # Favorites in Kickoff
 sed -i '/<entry name="launchers" type="StringList">/,/<\/entry>/ s/<default>[^<]*<\/default>/<default>preferred:\/\/browser,applications:org.gnome.Ptyxis.desktop,applications:org.kde.discover.desktop,preferred:\/\/filemanager<\/default>/' /usr/share/plasma/plasmoids/org.kde.plasma.taskmanager/contents/config/main.xml

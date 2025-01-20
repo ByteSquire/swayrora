@@ -1,6 +1,6 @@
 # vim: set ft=make :
 ########################
-### aurora-apps.just
+### swayrora-apps.just
 ########################
 ## Standardized verbs
 # configure- = configure something that is pre-installed on the image

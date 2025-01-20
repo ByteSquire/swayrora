@@ -1,16 +1,16 @@
-# Aurora
+# Swayrora
 
 >This README is under construction temporarily as we cleanup the repository after splitting away from [Bluefin](https://github.com/ublue-os/bluefin).
 
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/a940189170c8456c85a75ea36edb32c7)](https://app.codacy.com/gh/ublue-os/aurora/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/a940189170c8456c85a75ea36edb32c7)](https://app.codacy.com/gh/bytesquire/swayrora/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
-[![Stable Images](https://github.com/ublue-os/aurora/actions/workflows/build-image-stable.yml/badge.svg)](https://github.com/ublue-os/aurora/actions/workflows/build-image-stable.yml)[![Latest Images](https://github.com/ublue-os/aurora/actions/workflows/build-image-latest.yml/badge.svg)](https://github.com/ublue-os/aurora/actions/workflows/build-image-latest.yml)
-
-
-![aurora](https://github.com/user-attachments/assets/5d16c9fd-cdfa-49a0-bc03-b28026f8c6df)
+[![Stable Images](https://github.com/bytesquire/swayrora/actions/workflows/build-image-stable.yml/badge.svg)](https://github.com/bytesquire/swayrora/actions/workflows/build-image-stable.yml)[![Latest Images](https://github.com/bytesquire/swayrora/actions/workflows/build-image-latest.yml/badge.svg)](https://github.com/bytesquire/swayrora/actions/workflows/build-image-latest.yml)
 
 
-Aurora is a delightful KDE desktop experience for end-users that are looking for reliability and developers for the most-hassle free setup. Zero maintenance included.
+![swayrora](https://github.com/user-attachments/assets/5d16c9fd-cdfa-49a0-bc03-b28026f8c6df)
+
+
+Swayrora is a delightful KDE desktop experience for end-users that are looking for reliability and developers for the most-hassle free setup. Zero maintenance included.
 
 - [Download Aurora](https://getaurora.dev)
 
@@ -47,10 +47,10 @@ sudo mokutil --import public_key.der
 
 ## Star History
 
-<a href="https://star-history.com/#ublue-os/aurora&Date">
+<a href="https://star-history.com/#bytesquire/swayrora&Date">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=ublue-os/aurora&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=ublue-os/aurora&type=Date" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=ublue-os/aurora&type=Date" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=bytesquire/swayrora&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=bytesquire/swayrora&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=bytesquire/swayrora&type=Date" />
   </picture>
 </a>
