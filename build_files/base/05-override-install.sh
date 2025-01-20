@@ -58,4 +58,4 @@ fc-cache -f /usr/share/fonts/ubuntu
 fc-cache -f /usr/share/fonts/inter
 
 # Caps
-setcap 'cap_net_raw+ep' /usr/libexec/ksysguard/ksgrd_network_helper
+#setcap 'cap_net_raw+ep' /usr/libexec/ksysguard/ksgrd_network_helper
