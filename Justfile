@@ -136,7 +136,7 @@ build $image="swayrora" $tag="latest" $flavor="main" rechunk="0" ghcr="0" pipeli
     image_name=$(just image_name {{ image }} {{ tag }} {{ flavor }})
 
     # Base Image
-    base_image_name="kinoite"
+    base_image_name="sericea"
 
     # Target
     if [[ "${image}" =~ dx ]]; then
@@ -299,7 +299,7 @@ rechunk $image="swayrora" $tag="latest" $flavor="main" ghcr="0" pipeline="0":
 
     # Cleanup Space during Github Action
     if [[ "{{ ghcr }}" == "1" ]]; then
-        base_image_name=kinoite-main
+        base_image_name=sericea-main
         if [[ "${tag}" =~ stable ]]; then
             tag="stable-daily"
         fi
@@ -540,7 +540,7 @@ build-iso $image="swayrora" $tag="latest" $flavor="main" ghcr="0" pipeline="0":
     iso_build_args+=(IMAGE_TAG="${tag}")
     iso_build_args+=(ISO_NAME="/github/workspace/${build_dir}/${image_name}-${tag}.iso")
     iso_build_args+=(SECURE_BOOT_KEY_URL="https://github.com/ublue-os/akmods/raw/main/certs/public_key.der")
-    iso_build_args+=(VARIANT="Kinoite")
+    iso_build_args+=(VARIANT="Sericea")
     iso_build_args+=(VERSION="${FEDORA_VERSION}")
     iso_build_args+=(WEB_UI="false")
 
