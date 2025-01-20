@@ -29,7 +29,7 @@ rpm-ostree override replace \
 #    --from repo=copr:copr.fedorainfracloud.org:sentry:switcheroo-control_discrete \
 #        switcheroo-control
 
-rm /etc/yum.repos.d/_copr_sentry-switcheroo-control_discrete.repo
+#rm /etc/yum.repos.d/_copr_sentry-switcheroo-control_discrete.repo
 
 # Starship Shell Prompt
 curl --retry 3 -Lo /tmp/starship.tar.gz "https://github.com/starship/starship/releases/latest/download/starship-x86_64-unknown-linux-gnu.tar.gz"
