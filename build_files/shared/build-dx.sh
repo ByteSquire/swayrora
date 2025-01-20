@@ -28,7 +28,7 @@ sysctl -p
 /ctx/build_files/dx/04-override-install-dx.sh
 
 # Branding Changes
-echo "Variant=Developer Experience" >> /usr/share/kde-settings/kde-profile/default/xdg/kcm-about-distrorc
+#echo "Variant=Developer Experience" >> /usr/share/kde-settings/kde-profile/default/xdg/kcm-about-distrorc
 
 # Systemd and Disable Repos
 /ctx/build_files/dx/09-cleanup-dx.sh
