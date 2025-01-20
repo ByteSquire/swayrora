@@ -24,10 +24,10 @@ rpm-ostree override replace \
         fwupd-plugin-uefi-capsule-data
 
 # Switcheroo patch
-rpm-ostree override replace \
-    --experimental \
-    --from repo=copr:copr.fedorainfracloud.org:sentry:switcheroo-control_discrete \
-        switcheroo-control
+#rpm-ostree override replace \
+#    --experimental \
+#    --from repo=copr:copr.fedorainfracloud.org:sentry:switcheroo-control_discrete \
+#        switcheroo-control
 
 rm /etc/yum.repos.d/_copr_sentry-switcheroo-control_discrete.repo
 
