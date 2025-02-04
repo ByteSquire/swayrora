@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+echo "::group:: ===$(basename "$0")==="
+
 set -eoux pipefail
 
 # Patched shell
@@ -31,6 +33,24 @@ rpm-ostree override replace \
 
 #rm /etc/yum.repos.d/_copr_sentry-switcheroo-control_discrete.repo
 
+# TODO: Fedora 41 specific -- re-evaluate with Fedora 42
+# negativo's libheif is broken somehow on older Intel machines
+# https://github.com/ublue-os/aurora/issues/8
+#rpm-ostree override replace \
+#    --experimental \
+#    --from repo=copr:copr.fedorainfracloud.org:sentry:switcheroo-control_discrete \
+#        switcheroo-control
+
+#rm /etc/yum.repos.d/_copr_sentry-switcheroo-control_discrete.repo
+
+# TODO: Fedora 41 specific -- re-evaluate with Fedora 42
+# negativo's libheif is broken somehow on older Intel machines
+# https://github.com/ublue-os/aurora/issues/8
+rpm-ostree override replace \
+    --experimental \
+    --from repo=fedora \
+        libheif heif-pixbuf-loader
+
 # Starship Shell Prompt
 curl --retry 3 -Lo /tmp/starship.tar.gz "https://github.com/starship/starship/releases/latest/download/starship-x86_64-unknown-linux-gnu.tar.gz"
 tar -xzf /tmp/starship.tar.gz -C /tmp
@@ -59,3 +79,5 @@ fc-cache -f /usr/share/fonts/inter
 
 # Caps
 #setcap 'cap_net_raw+ep' /usr/libexec/ksysguard/ksgrd_network_helper
+
+echo "::endgroup::"

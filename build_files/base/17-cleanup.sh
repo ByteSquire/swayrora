@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+echo "::group:: ===$(basename "$0")==="
+
 set -eoux pipefail
 
 # Setup Systemd
@@ -14,6 +16,7 @@ systemctl enable brew-setup.service
 systemctl enable brew-upgrade.timer
 systemctl enable brew-update.timer
 systemctl enable aurora-groups.service
+systemctl enable usr-share-sddm-themes.mount
 systemctl --global enable ublue-user-setup.service
 systemctl --global enable podman-auto-update.timer
 systemctl enable check-sb-key.service
@@ -23,8 +26,6 @@ sed -i 's@\[Desktop Entry\]@\[Desktop Entry\]\nHidden=true@g' /usr/share/applica
 sed -i 's@\[Desktop Entry\]@\[Desktop Entry\]\nHidden=true@g' /usr/share/applications/htop.desktop
 sed -i 's@\[Desktop Entry\]@\[Desktop Entry\]\nHidden=true@g' /usr/share/applications/nvtop.desktop
 
-#Disable autostart behaviour
-rm -f /etc/xdg/autostart/solaar.desktop
 
 # Disable all COPRs and RPM Fusion Repos
 sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/negativo17-fedora-multimedia.repo
@@ -42,3 +43,5 @@ done
 if [ -f /etc/yum.repos.d/fedora-coreos-pool.repo ]; then
     sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/fedora-coreos-pool.repo
 fi
+
+echo "::endgroup::"
