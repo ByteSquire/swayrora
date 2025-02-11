@@ -17,6 +17,7 @@
 				"foo2zjs",
 				"freeipa-client",
 				"fuse-encfs",
+				"fw-fanctrl",
 				"gcc",
 				"git-credential-libsecret",
 				"glow",
@@ -41,8 +42,10 @@
 				"pulseaudio-utils",
 				"powertop",
 				"python3-pip",
+				"ptyxis",
 				"rclone",
 				"restic",
+				"rsms-inter-fonts",
 				"samba-dcerpc",
 				"samba-ldb-ldap-modules",
 				"samba-winbind-clients",
@@ -54,13 +57,15 @@
 				"sssd-krb5",
 				"sssd-nfs-idmap",
 				"stress-ng",
+				"scx-scheds",
 				"tailscale",
 				"tmux",
-				"usbmuxd",
+				"topgrade",
+				"ublue-fastfetch",
+				"ublue-motd",
 				"ublue-bling",
 				"ublue-brew",
-				"ublue-motd",
-				"ublue-fastfetch",
+				"usbmuxd",
 				"wireguard-tools",
 				"xprop",
 				"wl-clipboard",
@@ -121,6 +126,7 @@
 				"kcli",
 				"libvirt",
 				"libvirt-nss",
+				"intel-one-mono-fonts",
 				"lxc",
 				"mozilla-fira-mono-fonts",
 				"nicstat",
@@ -134,6 +140,7 @@
 				"podman-tui",
 				"podmansh",
 				"powerline-fonts",
+				"python3-ramalama",
 				"qemu-char-spice",
 				"qemu-device-display-virtio-gpu",
 				"qemu-device-display-virtio-vga",
@@ -149,7 +156,6 @@
 				"sysprof",
 				"tiptop",
 				"trace-cmd",
-				"ubuntu-family-fonts",
 				"udica",
 				"umoci",
 				"virt-manager",
@@ -162,8 +168,7 @@
 			"all": [
 				"firefox-langpacks",
 				"firefox",
-				"podman-docker",
-				"ublue-os-update-services"
+				"podman-docker"
 			],
 			"kinoite": [
 				"krfb",
@@ -178,9 +183,7 @@
 	},
 	"40": {
 		"include": {
-			"all": [
-				"ptyxis"
-			],
+			"all": [],
 			"dx": [
 				"lxd-agent",
 				"lxd"
@@ -197,9 +200,7 @@
 			"all": [
 				"google-noto-fonts-all"
 			],
-			"kinoite": [
-				"ptyxis"
-			]
+			"kinoite": []
 		},
 		"exclude": {
 			"all": [],
