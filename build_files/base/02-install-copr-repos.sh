@@ -7,11 +7,11 @@ set -eoux pipefail
 # Add Staging repo
 dnf5 -y copr enable ublue-os/staging
 
-# Add Switcheroo Repo
-#dnf5 -y copr enable sentry/switcheroo-control_discrete
+# Add Packages repo
+dnf5 -y copr enable ublue-os/packages
 
 # Add OpenRazer repo
-curl -Lo /etc/yum.repos.d/hardware:razer.repo https://openrazer.github.io/hardware:razer.repo
+dnf5 -y config-manager addrepo --from-repofile=https://openrazer.github.io/hardware:razer.repo
 
 # Enable Nerd fonts repo
 dnf5 -y copr enable che/nerd-fonts
@@ -21,6 +21,9 @@ dnf5 -y copr enable bieszczaders/kernel-cachyos-addons
 
 # Enable fw-fanctrl repo
 dnf5 -y copr enable tulilirockz/fw-fanctrl
+
+# Enable Terra repo
+dnf5 -y install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release{,-extras}
 
 
 echo "::endgroup::"
