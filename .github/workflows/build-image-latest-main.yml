@@ -8,8 +8,8 @@ on:
     paths-ignore:
       - "**.md"
   schedule:
-    - cron: "40 4 * * 1,2,3,4,5,6" # 4:40 UTC All But Sunday
-    - cron: "40 4 * * 0" # 4:40 UTC Sunday
+    - cron: "50 4 * * 1,2,3,4,5,6" # 4:50 UTC All But Sunday
+    - cron: "50 4 * * 0" # 4:50 UTC Sunday
   workflow_call:
   workflow_dispatch:
 
@@ -21,12 +21,12 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        brand_name: ["swayrora"]
+        brand_name: ["aurora"]
     with:
-      image_flavors: '["main", "nvidia", "nvidia-open", "hwe", "hwe-nvidia", "hwe-nvidia-open"]'
+      image_flavors: '["main", "nvidia", "nvidia-open"]'
       brand_name: ${{ matrix.brand_name }}
       stream_name: latest
-    # This needs splitting, right now a kernel pin will not work due to hwe kernel
+      #kernel_pin: 6.12.15-200.fc41.x86_64
 
   generate-release:
     name: Generate Release
@@ -36,10 +36,9 @@ jobs:
     with:
       stream_name: '["latest"]'
 
-  build-iso-latest:
-    name: Build Latest ISOs
-    needs: [build-image-latest]
-    if: github.event.schedule == '40 4 * * 0'
-
-    secrets: inherit
-    uses: ./.github/workflows/build-iso-latest.yml
+  # build-iso-latest:
+  #   name: Build Latest ISOs
+  #   needs: [build-image-latest]
+  #   if: github.event.schedule == '50 4 * * 0'
+  #   secrets: inherit
+  #   uses: ./.github/workflows/build-iso-latest.yml
