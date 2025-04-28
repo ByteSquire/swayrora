@@ -4,11 +4,6 @@ echo "::group:: ===$(basename "$0")==="
 
 set -eoux pipefail
 
-# Beta Updates Testing Repo...
-if [[ "${UBLUE_IMAGE_TAG}" == "beta" ]]; then
-  dnf5 config-manager setopt updates-testing.enabled=1
-fi
-
 # Remove Existing Kernel
 for pkg in kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra; do
   rpm --erase $pkg --nodeps
@@ -36,21 +31,22 @@ dnf5 versionlock add kernel kernel-devel kernel-devel-matched kernel-core kernel
 # Everyone
 # NOTE: we won't use dnf5 copr plugin for ublue-os/akmods until our upstream provides the COPR standard naming
 sed -i 's@enabled=0@enabled=1@g' /etc/yum.repos.d/_copr_ublue-os-akmods.repo
-if [[ "${UBLUE_IMAGE_TAG}" == "beta" ]]; then
-    dnf5 -y install /tmp/akmods/kmods/*xone*.rpm || true
-    dnf5 -y install /tmp/akmods/kmods/*xpadneo*.rpm || true
-    dnf5 -y install /tmp/akmods/kmods/*openrazer*.rpm || true
-    dnf5 -y install /tmp/akmods/kmods/*framework-laptop*.rpm || true
-else
-    dnf5 -y install \
-        /tmp/akmods/kmods/*xone*.rpm \
-        /tmp/akmods/kmods/*xpadneo*.rpm \
-        /tmp/akmods/kmods/*openrazer*.rpm \
-        /tmp/akmods/kmods/*framework-laptop*.rpm
-fi
+AKMODS=(
+    /tmp/akmods/kmods/*xone*.rpm
+    /tmp/akmods/kmods/*framework-laptop*.rpm
+    /tmp/akmods/kmods/*openrazer*.rpm
+)
+dnf5 -y install "${AKMODS[@]}"
 
-# Install v4l2loopback from terra or gracefully fail
-dnf5 -y install --repo="terra" /tmp/akmods/kmods/*v4l2loopback*.rpm || true
+# RPMFUSION Dependent AKMODS
+dnf5 -y install \
+        https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-"$(rpm -E %fedora)".noarch.rpm \
+        https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-"$(rpm -E %fedora)".noarch.rpm
+
+dnf5 -y install --repo="rpmfusion-free" \
+        v4l2loopback /tmp/akmods/kmods/*v4l2loopback*.rpm
+
+dnf5 -y remove rpmfusion-free-release rpmfusion-nonfree-release
 
 # Nvidia AKMODS
 if [[ "${IMAGE_NAME}" =~ nvidia ]]; then
@@ -68,7 +64,7 @@ if [[ "${IMAGE_NAME}" =~ nvidia ]]; then
  dnf5 config-manager setopt excludepkgs=golang-github-nvidia-container-toolkit
 
   # Install Nvidia RPMs
-  curl -Lo /tmp/nvidia-install.sh https://raw.githubusercontent.com/ublue-os/hwe/main/nvidia-install.sh
+  curl -Lo /tmp/nvidia-install.sh https://raw.githubusercontent.com/ublue-os/main/main/build_files/nvidia-install.sh
   chmod +x /tmp/nvidia-install.sh
   IMAGE_NAME="${BASE_IMAGE_NAME}" RPMFUSION_MIRROR="" /tmp/nvidia-install.sh
   rm -f /usr/share/vulkan/icd.d/nouveau_icd.*.json

@@ -20,7 +20,7 @@
 				"fcitx5-mozc",
 				"fcitx5-sayura",
 				"fcitx5-unikey",
- 				"firacode-nerd-fonts",
+				"firacode-nerd-fonts",
 				"firewall-config",
 				"fish",
 				"foo2zjs",
@@ -67,12 +67,12 @@
 				"samba-winbind-modules",
 				"scx-scheds",
 				"setools-console",
-				"skanpage",
 				"sssd-ad",
 				"sssd-ipa",
 				"sssd-krb5",
 				"sssd-nfs-idmap",
 				"starship",
+				"sunshine",
 				"tailscale",
 				"tmux",
 				"ublue-bling",
@@ -117,6 +117,10 @@
 				"code",
 				"containerd.io",
 				"dbus-x11",
+				"docker-buildx-plugin",
+				"docker-ce",
+				"docker-ce-cli",
+				"docker-compose-plugin",
 				"edk2-ovmf",
 				"flatpak-builder",
 				"genisoimage",
@@ -159,6 +163,7 @@
 				"sysprof",
 				"tiptop",
 				"trace-cmd",
+				"ublue-os-libvirt-workarounds",
 				"udica",
 				"umoci",
 				"virt-manager",
@@ -190,12 +195,7 @@
 				"epson-inkjet-printer-escpr2",
 				"google-noto-fonts-all"
 			],
-			"dx":[
-				"docker-buildx-plugin",
-				"docker-ce",
-				"docker-ce-cli",
-				"docker-compose-plugin"
-			]
+			"dx":[]
 		},
 		"exclude": {
 			"all": [],
@@ -205,8 +205,9 @@
 	"42": {
 		"include": {
 			"all": [
-        			"google-noto-fonts-all",
-        			"uupd"
+				"google-noto-fonts-all",
+				"uupd",
+				"fw-fanctrl"
       		],
 			"dx": []
 		},
