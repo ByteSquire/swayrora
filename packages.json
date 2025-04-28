@@ -84,10 +84,9 @@
 				"wireguard-tools",
 				"wl-clipboard",
 				"xprop",
-				"zsh"
-			],
-			"kinoite": [],
-			"sericea": [
+				"zsh",
+
+				
 				"gnome-keyring",
 				"lxpolkit",
 				"mako",
@@ -99,6 +98,8 @@
 				"brightnessctl",
 				"blueman"
 			],
+			"kinoite": [],
+			"sericea": [],
 			"dx": [
 				"adobe-source-code-pro-fonts",
 				"android-tools",
@@ -179,12 +180,12 @@
 				"krfb",
 				"krfb-libs",
 				"plasma-welcome-fedora",
-				"podman-docker"
-			],
-			"kinoite": [],
-			"sericea": [
+				"podman-docker",
+				
 				"rofi*"
 			],
+			"kinoite": [],
+			"sericea": [],
 			"dx": []
 		}
 	},
