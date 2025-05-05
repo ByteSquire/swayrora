@@ -79,8 +79,10 @@
 				"ublue-brew",
 				"ublue-fastfetch",
 				"ublue-motd",
+				"ublue-setup-services",
 				"uld",
 				"usbmuxd",
+				"uupd",
 				"wireguard-tools",
 				"wl-clipboard",
 				"xprop",
@@ -175,8 +177,12 @@
 		},
 		"exclude": {
 			"all": [
+				"fedora-bookmarks",
+				"fedora-chromium-config",
+				"fedora-chromium-config-kde",
 				"firefox",
 				"firefox-langpacks",
+				"kcharselect",
 				"krfb",
 				"krfb-libs",
 				"plasma-welcome-fedora",
@@ -207,7 +213,6 @@
 		"include": {
 			"all": [
 				"google-noto-fonts-all",
-				"uupd",
 				"fw-fanctrl"
       		],
 			"dx": []

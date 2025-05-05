@@ -128,7 +128,7 @@ dx-group:
 
     for GROUP_ADD in "${GROUPS_ADD[@]}" ; do
         append_group $GROUP_ADD
-        pkexec usermod -aG $GROUP_ADD $USER
+        pkexec usermod -aG $GROUP_ADD {{ `id -un` }}
     done
 
     echo "Reboot system and log back in to use docker, incus-admin, libvirt."
@@ -249,7 +249,7 @@ install-system-flatpaks CURR_LIST_FILE="":
     CURR_LIST_FILE={{ CURR_LIST_FILE }}
 
     # Add Flathub remote if it does not exist
-    flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+    flatpak remote-add --if-not-exists --system flathub https://flathub.org/repo/flathub.flatpakrepo
 
     # Disable Fedora Flatpak remotes
     for remote in fedora fedora-testing; do

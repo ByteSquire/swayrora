@@ -1,11 +1,9 @@
 # Swayrora
 
->This README is under construction temporarily as we cleanup the repository after splitting away from [Bluefin](https://github.com/ublue-os/bluefin).
-
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/a940189170c8456c85a75ea36edb32c7)](https://app.codacy.com/gh/bytesquire/swayrora/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
 [![Stable Images](https://github.com/bytesquire/swayrora/actions/workflows/build-image-stable.yml/badge.svg)](https://github.com/bytesquire/swayrora/actions/workflows/build-image-stable.yml) [![Latest Images](https://github.com/bytesquire/swayrora/actions/workflows/build-image-latest-main.yml/badge.svg)](https://github.com/bytesquire/swayrora/actions/workflows/build-image-latest-main.yml) [![Latest Images HWE](https://github.com/bytesquire/swayrora/actions/workflows/build-image-latest-hwe.yml/badge.svg)](https://github.com/bytesquire/swayrora/actions/workflows/build-image-latest-hwe.yml)
-[![Stable Images](https://github.com/ublue-os/aurora/actions/workflows/build-image-stable.yml/badge.svg)](https://github.com/ublue-os/aurora/actions/workflows/build-image-stable.yml) [![Latest Images](https://github.com/bytesquire/swayrora/actions/workflows/build-image-latest-main.yml/badge.svg)](https://github.com/bytesquire/swayrora/actions/workflows/build-image-latest-main.yml) [![Latest Images HWE](https://github.com/bytesquire/swayrora/actions/workflows/build-image-latest-hwe.yml/badge.svg)](https://github.com/bytesquire/swayrora/actions/workflows/build-image-latest-hwe.yml) [![Beta Images](https://github.com/bytesquire/swayrora/actions/workflows/build-image-beta.yml/badge.svg)](https://github.com/bytesquire/swayrora/actions/workflows/build-image-beta.yml)
+[![Stable Images](https://github.com/bytesquire/swayrora/actions/workflows/build-image-stable.yml/badge.svg)](https://github.com/bytesquire/swayrora/actions/workflows/build-image-stable.yml) [![Latest Images](https://github.com/bytesquire/swayrora/actions/workflows/build-image-latest-main.yml/badge.svg)](https://github.com/bytesquire/swayrora/actions/workflows/build-image-latest-main.yml) [![Latest Images HWE](https://github.com/bytesquire/swayrora/actions/workflows/build-image-latest-hwe.yml/badge.svg)](https://github.com/bytesquire/swayrora/actions/workflows/build-image-latest-hwe.yml) <!--[![Beta Images](https://github.com/bytesquire/swayrora/actions/workflows/build-image-beta.yml/badge.svg)](https://github.com/bytesquire/swayrora/actions/workflows/build-image-beta.yml)-->
 
 
 ![swayrora](https://github.com/user-attachments/assets/5d16c9fd-cdfa-49a0-bc03-b28026f8c6df)
@@ -19,7 +17,7 @@ Swayrora is a delightful KDE desktop experience for end-users that are looking f
 
 1. [Discussions and Announcements](https://universal-blue.discourse.group/c/aurora/11) - strongly recommended!
 2. [Documentation](https://docs.getaurora.dev/)
-3. [Contributing Guide](https://docs.projectbluefin.io/contributing)
+3. [Contributing Guide](https://universal-blue.org/contributing.html)
 
 ### Secure Boot
 
