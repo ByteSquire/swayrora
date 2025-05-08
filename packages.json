@@ -188,7 +188,12 @@
 				"plasma-welcome-fedora",
 				"podman-docker",
 				
-				"rofi*"
+				"rofi*",
+				"sunshine",
+				"openrazer-daemon",
+				"virt-manager",
+				"virt-v2v",
+				"virt-viewer",
 			],
 			"kinoite": [],
 			"sericea": [],
